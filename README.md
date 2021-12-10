@@ -35,3 +35,32 @@
 * admin 화면에서 각 필드를 채워 게시글을 등록하였다. 
 13. Postman을 통한 각 url 검증 
 * postman을 통해 각 url이 실제로 원하는 데이터를 보여주는지를 검증하였다. 
+
+## 2021-11-30
+1. frontend(React.js) 뼈대 만들기 
+* 불필요한 기존 파일들을 제거 후, src 폴더에 하위 폴더들을 생성하여 화면을 구성하는데에 필요한 파일들을 생성하였다.
+2. React.js 'components' 폴더 내 파일 수정
+* components 폴더에는 각 화면을 구성하는 파일들이 담겨져있다.
+* 파일 내 구조는 함수 컴포넌트를 사용하여 첨부 이미지와 동일하게 추가하였다. 
+![image](https://user-images.githubusercontent.com/95834067/145533550-b1a70711-5150-4b50-afed-c27ce4c5dc78.png)
+3. React.js App.js 파일 수정
+* 각 화면에 맞는 url을 생성하기 위해 BrowserRouter, Route, Routes 태그를 이용하여 파일을 수정하였다. 
+4. React.js bootstrap 라이브러리 반영(index.html / Navbar.js)
+* bootstrap 라이브러리를 사용하기 위해 bootstrap 사이트를 참고하여 index.html 파일에 전체적인 스타일을 설정해주었다. 
+* Navbar.js 파일에서 부트스트랩 코드를 참고하여 Link 및 NavLink를 이용하여 이동하는 화면과 연결시켜주었다.
+5. React.js bootstrap 라이브러리 반영(Home.js)
+* Home.js 에 부트스트랩 블로그 버전을 참고하여 코드를 추가해주었다. 
+6. React.js Blog.js 파일 수정
+* axios를 통해 게시글 목록과 featured 게시글 목록을 보여주는 백엔드의 url과 연결시켜주었다. (이 때, 게시글 목록은 테이블의 전체 데이터를 보여주도록 하고, featured 게시글 목록은 하나의 데이터만 보여주도록 한다.)
+* map을 통해 실제 데이터와 매핑하여 리스트에 담아주었다. 
+* 부트스트랩을 이용하여 화면을 정돈해주었다. 
+
+## 2021-12-02
+1. React.js BlogDetail.js 파일 수정
+* 게시글 중 하나를 클릭하면 그에 대한 전체 내용을 볼 수 있게 코드를 수정하였다. 
+* useParams를 이용하여 고유한 id를 받아와서 url를 매칭한다. 
+2. React.js Category.js 파일 수정
+* 카테고리 별로 게시글을 볼 수 있도록 수정하였다.
+* useParams를 이용하여 카테고리 별로 고유한 id를 받아와서 url를 매칭한다. 
+* blog.js와 동일한 폼으로 구성하였다. 
+

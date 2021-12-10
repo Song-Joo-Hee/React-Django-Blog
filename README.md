@@ -1,3 +1,9 @@
 # 리액트와 장고를 이용한 풀스택 블로그
 ## 2021-11-26 
-Django 및 React.js 설치 : Backend / Frontend 따로 폴더를 생성하여 폴더 안에 장고와 리액트를 각각 설치하였다.
+1. Django 및 React.js 설치 : Backend / Frontend 따로 폴더를 생성하여 폴더 안에 장고와 리액트를 각각 설치하였다.
+2. Django 가상환경 설정 :  가상환경을 위한 venv 폴더를 생성하여 가상환경을 활성화해주었다. 
+3. PostgreSQL 데이터베이스 생성 : 장고와 연결해줄 데이터베이스를 psql을 통해 생성하였다. (이름 : blog)
+4. Django 프로젝트 및 앱 생성 : 장고 명령어를 통해 프로젝트를 생성하였고, 해당 프로젝트 안에 앱을 생성하였다. (프로젝트 이름 : anonymous_blog, 앱 이름 : blog) 
+5. Django settings.py 파일 수정 : * 장고와 리액트의 연동을 위한 설정을 추가하였다. (corsheaders, dirs 경로 변경, rest_framework 설정 추가) 
+* 데이터베이스는 포스트그레로 설정을 수정하였다.  
+* 정적파일과 미디어파일을 위한 경로 설정을 추가하였다. 

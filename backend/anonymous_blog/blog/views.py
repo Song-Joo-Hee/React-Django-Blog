@@ -11,16 +11,11 @@ class BlogPostListView(ListAPIView):
     lookup_field = 'slug'
     permission_classes = (permissions.AllowAny, )
 
-class BlogPostDetailView(RetrieveAPIView): # retrieveAPIView : 데이터 하나만 보고싶을때 사용 
+class BlogPostDetailView(RetrieveAPIView): # retrieveAPIView : 데이터 하나만 보고싶을때 사용
     queryset = BlogPost.objects.order_by('-date_created')
     serializer_class = BlogPostSerializer
     lookup_field = 'slug'
-    permission_classes = (permissions.AllowAny, ) 
-
-    def get(self, request):
-        post = self.get_object()
-        serializer = BlogPostSerializer(post)
-        return Response(serializer.data)
+    permission_classes = (permissions.AllowAny, )
 
 class BlogPostFeaturedView(ListAPIView):
     queryset = BlogPost.objects.all().filter(featured=True)

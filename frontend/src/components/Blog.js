@@ -45,7 +45,7 @@ const Blog = () => {
          let result = [];
 
          blogs.map(blogPost => { // by.juhee 실제 데이터와 매핑하여 리스트에 담아주기 (구조 : 카테고리, 제목, 월일, 발췌) 211130
-             return list.push(
+            return list.push(
                 <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div className="col p-4 d-flex flex-column position-static">
                         <strong className="d-inline-block mb-2 text-primary">{capitalizeFirstLetter(blogPost.category)}</strong>
@@ -55,8 +55,8 @@ const Blog = () => {
                         <Link to={`/blog/${blogPost.slug}`} className="stretched-link">Continue reading</Link>
                     </div>
                     <div className="col-auto d-none d-lg-block">
-                        <img width='200' height='250' src={blogPost.thmubnail} alt='thumbnail' />
-                    </div>  
+                        <img width='200' height='250' src={blogPost.thumbnail} alt='thumbnail' />
+                    </div>
                 </div>
             );
         });
